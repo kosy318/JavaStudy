@@ -2,11 +2,13 @@ package com.object;
 
 public class Circle {
 
-	int radius = 0;
+	int radius;
 	
 	// 持失切
-	Circle(){}	
-	Circle(int r) {
+	Circle(){ // default 持失切
+		radius = 8;
+	}	
+	Circle(int r) { // constructor with parameters
 		radius = r;
 	}
 	
