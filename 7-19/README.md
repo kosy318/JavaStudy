@@ -22,6 +22,10 @@ int i = sc.nextInt();
 sc.next() : 공백이나 줄바꿈같은걸로 구분됨
 char ch = sc.next().charAt(0);
 
+### com.method
 #### OOP
 method == function<br>
 수식어(순서 바껴도 됨) 리턴타입 메소드이름( parameter ) { method body }<br>
+
+- MethodTest.java
+자바 함수 만들기 연습
