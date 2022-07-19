@@ -10,25 +10,14 @@ public class Car {
 	
 	// constructor
 	Car() { // default constructor
-		System.out.println("Car 持失--------");
-		this.info();
-		System.out.println("---------------");
+		this(0); // 持失切 鎧 持失切 紫遂
 	}
 	// constructor with parameters
 	Car(int num) {
-		this.num = num;
-
-		System.out.println("Car 持失--------");
-		this.info();
-		System.out.println("---------------");
+		this(num, null);
 	}
 	Car(int num, String model){
-		this.num = num;
-		this.model = model;
-		
-		System.out.println("Car 持失--------");
-		this.info();
-		System.out.println("---------------");
+		this(num, model, null);
 	}
 	Car(int num, String model, String owner) {
 		this.num = num;
