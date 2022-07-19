@@ -6,7 +6,7 @@ public class Circle {
 	
 	// 持失切
 	Circle(){ // default 持失切
-		radius = 8;
+		this(0);
 	}	
 	Circle(int radius) { // constructor with parameters
 		this.radius = radius;
