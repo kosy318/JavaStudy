@@ -29,3 +29,11 @@ method == function<br>
 
 - MethodTest.java
 자바 함수 만들기 연습
+
+#### class + object
+class : data + method로 이루어진 구조. Template과 같음<br>
+object : class로부터 생성된 실체(= instance), 키워드 new로 객체 생성
+- object 사용 순서
+1. class 설계 // class Test{}
+2. 객체 생성 // Test t = new Test();
+3. 객체 사용 // t.go();
