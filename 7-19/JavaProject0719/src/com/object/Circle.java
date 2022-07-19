@@ -8,8 +8,8 @@ public class Circle {
 	Circle(){ // default »ý¼ºÀÚ
 		radius = 8;
 	}	
-	Circle(int r) { // constructor with parameters
-		radius = r;
+	Circle(int radius) { // constructor with parameters
+		this.radius = radius;
 	}
 	
 	public double getArea() {
@@ -22,7 +22,6 @@ public class Circle {
 	
 	public static void main(String[] args) {
 		Circle c = new Circle(3);
-		
 		System.out.println(c.getArea());
 		
 		Circle c2 = new Circle();

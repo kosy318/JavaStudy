@@ -9,8 +9,26 @@ public class Car {
 	boolean running = false;
 	
 	// constructor
-	Car() {
-		System.out.println("Car 持失");
+	Car() { // default constructor
+		System.out.println("Car 持失--------");
+		this.info();
+		System.out.println("---------------");
+	}
+	// constructor with parameters
+	Car(int num) {
+		this.num = num;
+
+		System.out.println("Car 持失--------");
+		this.info();
+		System.out.println("---------------");
+	}
+	Car(int num, String model){
+		this.num = num;
+		this.model = model;
+		
+		System.out.println("Car 持失--------");
+		this.info();
+		System.out.println("---------------");
 	}
 	Car(int num, String model, String owner) {
 		this.num = num;
@@ -30,23 +48,29 @@ public class Car {
 	
 	public void run() {
 		if(!running) System.out.println("running...");
+		else System.out.println("already running...");
 		running = true;
 	}
 	
 	public void stop() {
 		if(running) System.out.println("stop!!!");
+		else System.out.println("already stopped.");
 		running = false;
 	}
 	
 	public static void main(String[] args) {
-		Car newCar = new Car(1234, "m5", "tommy");
+		Car c1 = new Car();
+		Car c2 = new Car(1234);
+		Car c3 = new Car(4567, "k5");
+		
+		Car newCar = new Car(7891, "k3", "Tom");
 
-		newCar.owner = "sssss";
+		newCar.owner = "Jerry";
 		
 		newCar.info();
 		newCar.run();
 		newCar.run();
-		newCar.stop();		
+		newCar.stop();
 	}
 	
 }
