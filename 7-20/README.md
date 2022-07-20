@@ -58,3 +58,9 @@ array + class 응용
 - Member.java
 - MemberManager.java
 - MemberTest.java
+
+### com.book
+array + class 응용2
+- Book.java
+- BookManager.java
+- BookTest.java
