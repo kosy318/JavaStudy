@@ -32,3 +32,29 @@ new 라는 키워드로
 static 연습 + Math class 연습
 - Circle.java<br>
 Math class 연습
+
+#### Wrapper Class
+기본형 데이터를 참조형으로 변환시켜 주는 클래스들
+- boolean -> Boolean
+- byte -> Byte
+- short -> Short
+- int -> Integer<br>
+Integer.MIN_VALUE;<br>
+Integer.MAX_VALUE;<br>
+Integer.parseInt("string");
+- long -> Long
+- float -> Float
+- double -> Double
+- char -> Char
+<br>
+
+- WrapperClassTest.java<br>
+wrapper class 연습<br>
+boxing : 기본 타입의 데이터를 래퍼 클래스의 인스턴스로 변환하는 과정<br>
+unboxing : 래퍼 클래스의 인스턴스에 저장된 값을 다시 기본 타입의 데이터로 꺼내는 과정
+
+### com.member
+array + class 응용
+- Member.java
+- MemberManager.java
+- MemberTest.java
