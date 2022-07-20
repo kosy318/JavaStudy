@@ -3,23 +3,24 @@ ctrl+shift+O : import
 
 ## JavaProject0719\src
 ### com.array
-- ArrayMulti.java
+- ArrayMulti.java<br>
 배열 선언 및 접근
-- ArrayMulti2D.java
+- ArrayMulti2D.java<br>
 2D배열 선언 및 입력을 받아 4방 접근
-- ArrayMulti2D2.java
+- ArrayMulti2D2.java<br>
 2D배열 선언 및 모든 요소의 4방 접근
 
 #### 입력 받기
-- 키보드 입력
+- 키보드 입력<br>
 Scanner sc = new Scanner(System.in);
-- 변수 입력
+- 변수 입력<br>
 Scanner sc = new Scanner(src);
 <br>
-- int 입력
+
+- int 입력<br>
 int i = sc.nextInt();
-- char 입력
-sc.next() : 공백이나 줄바꿈같은걸로 구분됨
+- char 입력<br>
+sc.next() : 공백이나 줄바꿈같은걸로 구분됨<br>
 char ch = sc.next().charAt(0);
 
 ### com.method
@@ -27,7 +28,7 @@ char ch = sc.next().charAt(0);
 method == function<br>
 수식어(순서 바껴도 됨) 리턴타입 메소드이름( parameter ) { method body }<br>
 
-- MethodTest.java
+- MethodTest.java<br>
 자바 함수 만들기 연습
 
 #### class + object
@@ -39,7 +40,7 @@ object : class로부터 생성된 실체(= instance), 키워드 new로 객체 �
 3. 객체 사용 // t.go();
 
 ### com.object
-- Car.java, Circle.java, Rect.java
+- Car.java, Circle.java, Rect.java<br>
 자바 클래스 만들기 연습
 
 #### 생성자
