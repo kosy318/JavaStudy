@@ -1,0 +1,6 @@
+package com.array;
+
+public class Other {
+	// 클래스 실행시키면서 args 배열에 값 전달하기
+
+}
