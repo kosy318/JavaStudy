@@ -9,11 +9,13 @@ Button & Frame & Checkbox
 String class 연습
 
 #### String
-// s는 heap에 생기지x, Constant String Pool에 생성<br>
-// 원본은 바꿀 수 x<br>
-String s = "mylimeorange";<br>
-// t는 heap에 생김<br>
-String t = new String("mylimeorange");<br>
+```java
+// s는 heap에 생기지x, Constant String Pool에 생성
+// 원본은 바꿀 수 x
+String s = "mylimeorange";
+// t는 heap에 생김
+String t = new String("mylimeorange");
+```
 - == : 주소 비교<br>
 - .equals() : 내용 비교
 
