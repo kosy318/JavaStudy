@@ -19,3 +19,5 @@ public > protected > default > private<br>
 - 멤버 필드: 값 변경 불가
 - 메소드: 오버라이딩 불가
 - 클래스: 상속 불가
+
+### Singleton Pattern
