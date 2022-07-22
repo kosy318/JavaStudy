@@ -21,3 +21,17 @@ public > protected > default > private<br>
 - 클래스: 상속 불가
 
 ### Singleton Pattern
+
+### java 입력
+- src 입력
+```java
+Scanner sc = new Scanner(src);
+```
+- keyboard 입력
+```java
+Scanner sc = new Scanner(System.in);
+```
+- file 입력
+```java
+Scanner sc = new Scaner(new File("src\\res\\data.txt");
+```
