@@ -1,42 +1,5 @@
-- [객체지향 언어의 특징](#객체지향-언어의-특징)
-  * [상속](#상속)
-    + [상속(Inheritance)](#상속inheritance)
-    + [Object 클래스](#object-클래스)
-    + [다양한 상속 관계](#다양한-상속-관계)
-    + [단일 상속(Single Inheritance)](#단일-상속single-inheritance)
-    + [포함 관계](#포함-관계)
-  * [메서드 재정의](#메서드-재정의)
-    + [메서드 오버라이딩(overriding)](#메서드-오버라이딩overriding)
-    + [Annotation](#annotation)
-  * [Object](#object)
-    + [Object 클래스](#object-클래스)
-    + [toString 메서드](#tostring-메서드)
-    + [equals 메서드](#equals-메서드)
-    + [hashCode](#hashcode)
-  * [super](#super)
-    + [super 키워드](#super-키워드)
-- [package & import](#package--import)
-  * [package와 import](#package와-import)
-    + [package](#package)
-    + [import](#import)
-    + [일반적인 클래스 레이아웃](#일반적인-클래스-레이아웃)
-- [접근제한자와 데이터 은닉과 보호](#접근제한자와-데이터-은닉과-보호)
-    + [제한자(modifier)](#제한자modifier)
-    + [final](#final)
-    + [접근 제한자(Access modifier)](#접근-제한자access-modifier)
-    + [데이터 은닉과 보호(Encapsulation)](#데이터-은닉과-보호encapsulation)
-    + [객체의 생성 제어와 Singleton 디자인 패턴](#객체의-생성-제어와-singleton-디자인-패턴)
-- [다형성](#다형성)
-    + [다형성(Polymorphism)](#다형성polymorphism)
-    + [다형성의 활용 예1 - 다른 타입의 객체를 다루는 배열](#다형성의-활용-예1---다른-타입의-객체를-다루는-배열)
-    + [다형성의 활용 예2 - 매개변수의 다형성](#다형성의-활용-예2---매개변수의-다형성)
-- [다형성 활용](#다형성-활용)
-    + [다형성과 참조형 객체의 형 변환](#다형성과-참조형-객체의-형-변환)
-    + [참조형 객체의 형 변환](#참조형-객체의-형-변환)
-    + [참조 변수의 레벨에 따른 객체의 멤버 연결](#참조-변수의-레벨에-따른-객체의-멤버-)
-
-
-
+<hr>
+<hr>
 # 객체지향 언어의 특징
 OOP is A P.I.E
 - 추상화(Abstraction) : 현실의 객체를 추상화해서 클래스를 구성한다.
@@ -44,7 +7,7 @@ OOP is A P.I.E
 - 정보은폐(Information Hiding, EnCapsulation) : 데이터를 외부에 직접 노출시키지 않고 메서드를 아용해 보호할 수 있다.
 - 다형성(Polymorphism) : 하나의 객체를 여러 가지 타입(형)으로 참조할 수 있다.
 
-## 상속
+# 상속
 ### 상속(Inheritance)
 - 기존 클래스의 자산(멤버)을 자식 클래스에서 재사용하기 위한 것<br>
 부모의 생성자와 초기화 블록은 상속하지 않는다.
@@ -85,7 +48,7 @@ Spider의 코드를 수정하면 SpiderMan에도 반영되므로 유지 보수�
 상속: is a 관계가 성립하는가?<br>
 포함: has a 관계가 성립하는가?<br>
 
-## 메서드 재정의
+# 메서드 재정의
 ### 메서드 오버라이딩(overriding)
 - 조상 클래스에 정의된 메서드를 자식 클래스에서 적합하게 수정하는 것
 - 오버라이딩의 조건
@@ -155,7 +118,6 @@ static method 안에서는 this, super를 사용할 수 없음.
 한 파일 내에서 public은 한 클래스에만 붙일 수 있고, 그 클래스는 파일 이름이 되어야 한다.
 
 # package & import
-## package와 import
 ### package
 - PC의 많은 파일 관리 -> 폴더 이용
   - 유사한 목적의 파일을 기준으로 작성
@@ -237,7 +199,7 @@ static method 안에서는 this, super를 사용할 수 없음.
 - 객체의 생성을 제한해야 한다면?
   - 여러 개의 객체가 필요 없는 경우
     - 객체를 구별할 필요가 없는 경우 = 수정 가능한 멤버 변수가 없고 기능만 있는 경우
-    - 이런 객체를 stateless한 객체라고 한다.
+    - 이런 객체를 stateless한 객체라고 한다. 상태를 가지지 않고 기능만 가지는 클래스!!!
   - 객체를 계속 생성/삭제 하는데 많은 비용이 들어서 재사용이 유리한 경우<br>
 <br>
 
@@ -262,10 +224,11 @@ static method 안에서는 this, super를 사용할 수 없음.
 - 자바의 자료 구조를 간단하게 처리할 수 있음
 
 ### 다형성의 활용 예2 - 매개변수의 다형성
+- 메소드가 호출되기 위해선 메소드 이름과 파라미터가 맞아야하는데... 조상을 파라미터로 처리한다면 객체의 타입에 따라 메소드를 따로 만들 필요가 없음
 - API에서 파라미터로 Object를 받는다는 것은 모든 객체를 처리한다는 말이다.
 - 필요하다면 하위 클래스에서 오버라이딩 필요
 
-# 다형성 활용
+## 다형성 활용
 ### 다형성과 참조형 객체의 형 변환
 - 메모리에 있는 것과 사용할 수 있는 것의 차이
   - 메모리에 있더라도 참조하는 변수의 타입에 따라 접근할 수 있는 내용이 제한됨
@@ -273,11 +236,26 @@ static method 안에서는 this, super를 사용할 수 없음.
 ### 참조형 객체의 형 변환
 - 작은 집(child)에서 큰 집(super)으로 -> 묵시적 캐스팅
   - 자손 타입의 객체를 조상 타입으로 참조: 형변환 생략 가능
+```java
+Phone phone = new Phone();
+Object obj = phone;
+```
 - 큰집(super)에서 작은 집(child)으로 -> 명시적 캐스팅
   - 조상 타입을 자손 타입으로 참조: 형변환 생략 불가
+```java
+Phone phone = new SmartPhone();
+SmartPhone sPhone = (SmartPhone)phone;
+```
 - 조상을 무조건 자손으로 바꿀 수는 없다
-  - instanceof 연산자
+  - instanceof 연산자로 확인 후 형변환!
     - 실제 메모리에 있는 객체가 특정 클래스 타입인지 boolean으로 리턴
+  ```java
+  Person person = new Person();
+  
+  if(person instanceof SpiderMan){
+    SpiderMan sman = (SpiderMan)person;
+  }
+  ```
 
 ### 참조 변수의 레벨에 따른 객체의 멤버 연결
 - 상속 관계에서 객체의 멤버 변수가 중복될 때
