@@ -106,7 +106,7 @@ Valuable이라는 interface를 만들어 Money와 Watch의 implements에 추가�
   - 기존 방식으로라면 모든 구현체들이 추가되는 메소드를 override해야함
   - default 메소드는 abstract가 아니므로 반드시 구현해야 할 필요는 없어짐
 
-### defaultmethod의 충돌
+### default method의 충돌
 - JDK1.7 이하의 java에서는 interface method에 구현부가 없으므로 충돌이 없었음
 - JDK1.8 부터 default method가 생기면서 동일한 이름을 갖는 구현부가 있는 메서드가 충돌
 - method 우선순위
