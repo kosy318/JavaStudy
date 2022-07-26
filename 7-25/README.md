@@ -83,6 +83,11 @@ public class Complete extends MyAbstract{
 - 서로 상속의 관계가 없는 클래스들에게 인터페이스를 통한 관계 부여로 다형성 확장
 - 모듈 간 독립적 프로그래밍 가능 -> 개발 기간 단축
 
+ex) Money, Watch, Trash는 Thing을 상속받고있다.<br>
+pay라는 method가 Money와 Watch type만 받고싶을 때,<br>
+Valuable이라는 interface를 만들어 Money와 Watch의 implements에 추가해주면 된다!<br>
+
+
 ### default method
 - 인터페이스에 선언 된 구현부가 있는 일반 메소드
   - 메소드 선언부에 default modifier 추가 후 메소드 구현부 작성
@@ -163,7 +168,8 @@ public interface Interface_Name<T> {}
       this.some = some;
     }
   }
-  ```<br>
+  ```
+  <br>
   
   ### type parameter의 제한
   - 필요에 따라 구체적인 타입 제한 필요
