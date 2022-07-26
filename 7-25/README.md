@@ -75,6 +75,8 @@ public class Complete extends MyAbstract{
 
 ## Interface의 필요성
 ### 인터페이스의 필요성
+- 다중 상속을 지원하기 위해 나옴
+- 다른 클래스에서 미완성의 메소드를 구현(완성)해 줘야 함: implements
 - 구현의 강제로 표준화 처리
   - abstract 메소드 사용
 - 인터페이스를 통한 간접적인 클래스 사용으로 손쉬운 모듈 교체 지원
