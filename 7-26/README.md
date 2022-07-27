@@ -108,3 +108,48 @@
   ```java
   map.get(key);
   ```
+
+## Exception Handling
+### Exception
+- 프로그램 실행 중 발생하는 문제<br>
+ex) 데이터베이스 연결 시, 파일 입/출력 시, 배열의 잘못된 인덱스 접근<br>
+<br>
+
+### Error vs Exception
+#### Error
+- 복구 불가능한 문제 상황
+- StackOverFlowError, NoSuchMethodError
+
+#### Exception
+- 복구 가능한 문제 상황
+- RuntimeException :일단 실행은 됨<br>
+  ex) ArrayIndexOutOfBoundException, ArithmeticException, NullPointerException<br>
+  
+- Non-RuntimeException : 예외처리를 하지 않으면 컴파일 불가<br>
+  ex) IOException, InterruptedException, FileNotFoundException
+
+### Exception Handling
+1. 예외가 발생한 곳에서 직접 처리<br>
+  try ~ catch ~ finally
+2. 호출자로 보내서 예외처리 위임<br>
+  throws
+  
+### Exception Handling -1
+```java
+try{
+  예외 발생가능한 코드
+}
+catch(예외클래스명 변수명) {
+  예외 처리 코드
+} catch(예외클래스명 변수명) {
+  예외 처리 코드
+}
+finally {
+  예외 발생 여부와 관계없이 항상 실행될 코드
+}
+```
+
+### Exception Handling -2
+- 메소드에 throw가 붙어있으면 반드시 예외 처리를 해줘야한다.
+1. try ~ catch
+2. 상위 메소드에 throw로 예외처리
