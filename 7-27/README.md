@@ -44,7 +44,38 @@
 - Data의 흐름? Data의 묶음
 
 #### 사용 순서
-1. Stream 생성
-2. 중간 연산(임시 작업) : 여러번 수행, filtering, sorting...
-3. 최종 연산(결과) : 1번만 수행, 출력, 계산...
+1. Stream 생성<br>
+  ```java
+  // 1. 배열로부터 스트림 생성
+  Double[] point = {3.1, 4.6, 6.7, 5.6, 1.9};
+  Stream<Double> st1 = Arrays.stream(point);
 
+  // 2. Collection으로부터 스트림 생성
+  List<String> names = new ArrayList(Arrays.asList("joyful", "Profession", "jdk", "java"));
+  Stream<String> st2 = names.stream();
+
+  // 3. 스트림 직접 생성
+  Stream<Integer> st3 = Stream.of(100, 200, 300);
+  Stream<String> st4 = Stream.of("white", "red", "blue");
+  Stream<Circle> st5 = Stream.of(new Circle(8), new Circle(12));
+  ```
+2. 중간 연산(임시 작업) : 여러번 수행, filtering, sorting...
+3. 최종 연산(결과) : 1번만 수행, 출력, 계산...<br>
+  ```java
+  List<String> names = new ArrayList<>(Arrays.asList("joyful", "Profession", "jdk", "java"));
+  
+  // filter() : 중간연산, count() : 최종연산
+  long count = names.stream().filter(name -> name.contains("j")).count();
+  System.out.println(count);
+		
+  // map() : 스트림 내의 요소들을 하나씩 특정 값으로 변환해 줌, pipeline
+  names.stream()
+			 .map(name -> name.concat(" o"))
+			 .forEach(name -> System.out.println(name));
+       
+  List<Integer> ilist = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+  ilist.stream()
+       .filter(i -> i > 3) // 3보다 큰 숫자 중
+       .limit(3)		    	 // 3개까지만; 여기까지 중간연산
+			 .forEach(i -> System.out.print(i + " ")); // 최종연산
+  ```
