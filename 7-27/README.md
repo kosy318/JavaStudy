@@ -79,3 +79,63 @@
        .limit(3)		    	 // 3개까지만; 여기까지 중간연산
 			 .forEach(i -> System.out.print(i + " ")); // 최종연산
   ```
+
+## UI 만들기
+- javax.swing 사용
+### 창 생성
+<img src="https://user-images.githubusercontent.com/77595685/181198514-a4109db2-04e5-4676-bf71-14c155141777.png" width=200px>
+<br>
+
+```java
+JFrame f = new JFrame("UI TEst");
+f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 닫기 버튼 눌렀을 때동작 지정. 프로그램 종료
+f.setSize(400, 500); // size
+f.setVisible(true);  // 실행 시 창이 눈에 보이도록 지정
+```
+
+### 내용물 추가 및 배치
+#### FlowLayout()
+<img src="https://user-images.githubusercontent.com/77595685/181200266-79fc3e00-315d-47b9-a21a-58be143636ea.png" width=200px>
+<br>
+
+```java
+// f 안 내용물을 어떤 방식으로 배치할 건지 지정
+f.setLayout(new FlowLayout()); // 붙이는 순서대로 화면에 나타남.
+		
+Font font = new Font("Consolas", Font.BOLD, 25);
+JLabel la = new JLabel("Cute Chat", JLabel.CENTER); // 문자열, 중앙정렬
+la.setFont(font);
+
+JTextField tf = new JTextField(20); // 한줄 입력칸
+JTextArea ta = new JTextArea(10, 20);
+JScrollPane pane = new JScrollPane(ta); // scroll pane 위로 text area가 올라가게됨 
+
+f.add(la, "North");
+f.add(tf, "South");
+f.add(pane, "Center");
+```
+<br>
+#### BorderLayout()
+<img src="https://user-images.githubusercontent.com/77595685/181202175-7dec3e0b-d94e-465f-aa70-a87964657090.png" width=200px>
+<br>
+
+```java
+// f 안 내용물을 어떤 방식으로 배치할 건지 지정
+f.setLayout(new BorderLayout()); // 전체 화면을 동서남북중앙의 5개 영역으로 나눠서 관리
+		
+JButton ok = new JButton("ok");
+JButton cancel = new JButton("cancel");
+JTextField tf = new JTextField(20); // 한줄 입력칸
+JTextArea ta = new JTextArea(10, 20);
+ta.setEditable(false);
+JScrollPane pane = new JScrollPane(ta); // scroll pane 위로 text area가 올라가게됨 
+
+f.add(ok, "North");
+f.add(cancel, "East");
+f.add(tf, "South");
+f.add(pane, "Center");
+
+...
+
+tf.requestFocus(); // cursor가 바로 tf한테 감
+```
