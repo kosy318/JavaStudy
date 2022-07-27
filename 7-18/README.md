@@ -231,7 +231,7 @@ intArray[2] = new int[] {1, 2, 3};
 #### 타입에 따른 분류
 - Primitive Type variable : 기본 8가지 type의 변수
 - Reference Type variable : 나머지 모든 것(객체 참조)
-#### 선언 위치에 다른 분류
+#### 선언 위치에 따른 분류
 - 멤버 변수 : 클래스 멤버 변수(클래스 영역, static keyword), 인스턴스 멤버 변수(클래스 영역)
 - 지역 변수 : 지역 변수(함수 내부), 파라미터 변수(함수 선언부)
 
