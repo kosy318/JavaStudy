@@ -634,6 +634,50 @@ private void makeProblemPanel() {
     this.add(panel, BorderLayout.CENTER);
 }
 ```
+#### JTable
+```java
+JTable table = null;
+
+// table의 데이터를 관리하는 객체
+DefaultTableModel model = null;
+```
+```java
+// 테이블 구성
+table = new JTable();
+String[] header = {"랭킹", "제목", "개봉일", "누적관객"};
+model = (DefaultTableModel) table.getModel();
+model.setColumnIdentifiers(header);
+```
+#### 버튼이 눌렸을 때, 테이블 업뎃
+```java
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // 기존 자료 삭제
+        model.setRowCount(0);
+        
+        // 새로운 자료 조회
+        BoxOfficeDomParser parser = new BoxOfficeDomParser();
+        List<BoxOffice> list = parser.getBoxOffice();
+        for (BoxOffice info : list) { // table setting
+            model.addRow(new Object[] {info.getRank(), info.getMovieNm(), info.getOpenDt(), info.getAudiAcc()});
+        }
+        // model의 데이터가 변경되었음을 알림
+        model.fireTableDataChanged();
+    }
+});
+```
+#### table이 클릭되었을 때
+```java
+table.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        int row = table.getSelectedRow(); // 선택된 row 가져오기
+        String name = model.getValueAt(row, 1).toString();
+        JOptionPane.showMessageDialog(BoxOfficeUi.this, "선택된 영화 정보: " + name);
+      }
+});
+```
 
 <hr>
 
