@@ -417,6 +417,7 @@ public void endElement(String uri, String localName, String qName) throws SAXExc
 - 문서를 완전히 메모리에 로딩 후 필요한 내용 찾기
 - DOM Tree
   - 문서를 구성하는 모든 요소를 Node(태그, 속성, 값)로 구성
+    - root Node, element Node, attribute Node, text Node
   - 태그들은 root 노드(주소록)을 시작으로 부모-자식의 관계 구성
 
 ```java
