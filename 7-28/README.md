@@ -436,13 +436,11 @@ public List<BoxOffice> getBoxOffice() {
 }
 
 private void parse(Element root) {
-    // TODO: root에서 dailyBoxOffice를 추출한 후 BoxOffice를 생성해 list에 저장하시오.
   NodeList boxOffices = root.getElementsByTagName("dailyBoxOffice");
   for(int i=0; i<boxOffices.getLength(); i++) {
     Node child = boxOffices.item(i);
     list.add(getBoxOffice(child));
   }
-    // END:
 }
 
 private static BoxOffice getBoxOffice(Node node) {
